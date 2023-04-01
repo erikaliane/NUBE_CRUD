@@ -1,10 +1,11 @@
 const mysql = require('mysql');
 
+
 const conexion = mysql.createConnection({
-    DB_HOST : 'containers-us-west-195.railway.app',
-    DB_USER : 'root',
-    DB_PASSWORD : 'mJ6MyMnULScMnk3Uhnyg',
-    DB_NAME : 'railway'
+    host : process.env.DB_HOST || 'localhost',
+    user :  process.env.DB_USER || 'root',
+    password:  process.env.DB_PASSWORD || '',
+    database:  process.env.DB_NAME || 'crud_nodejs_db'
 })
 
 conexion.connect((error)=>{
