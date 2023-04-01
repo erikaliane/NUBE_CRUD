@@ -6,7 +6,7 @@ const conexion = require('./database/db');
 router.get('/',(req,res)=>{
 
    
-   conexion.query('SELECT * FROM producto',(error,results)=>{
+   conexion.query('SELECT * FROM productos',(error,results)=>{
         if(error){
             throw error;
         }else{
