@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 
 const conexion = mysql.createConnection({
-    port : process.env.DB_PORT ||"3106",
+    port : process.env.DB_PORT || 3306,
     host : process.env.DB_HOST || 'localhost',
     user :  process.env.DB_USER || 'root',
     password:  process.env.DB_PASSWORD || '',
@@ -16,5 +16,6 @@ conexion.connect((error)=>{
     }
     console.log('Conectado a la BD');
 })
+
 
 module.exports = conexion;
