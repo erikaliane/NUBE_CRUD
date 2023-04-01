@@ -6,6 +6,6 @@ const PORT = process.env.PORT || 5000
 app.set('view engine', 'ejs');
 
 
-app.use('/',require('./router'));
+app.use('/',require('./router.js'));
 
 app.listen(PORT)
